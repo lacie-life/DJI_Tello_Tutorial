@@ -11,21 +11,21 @@ print(me.get_battery())
 def getKeyboardInput():
     lr, fb, ud, yv = 0, 0, 0, 0
     speed = 50
-    if kp.getKey("LEFT"):
+    if kp.getKey("LEFT"): # left
         lr = -speed
-    elif kp.getKey("RIGHT"):
+    elif kp.getKey("RIGHT"): # right
         lr = speed
-    if kp.getKey("UP"):
+    if kp.getKey("UP"): # forward
         fb = speed
-    elif kp.getKey("DOWN"):
+    elif kp.getKey("DOWN"): # backward
         fb = -speed
-    if kp.getKey("w"):
+    if kp.getKey("w"): # up
         ud = speed
-    elif kp.getKey("s"):
+    elif kp.getKey("s"): # down
         ud = -speed
-    if kp.getKey("a"):
+    if kp.getKey("a"): # left yaw
         yv = -speed
-    elif kp.getKey("d"):
+    elif kp.getKey("d"): # right yaw
         yv = speed
     if kp.getKey("q"):
         me.land()
