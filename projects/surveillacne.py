@@ -10,6 +10,7 @@ me.connect()
 print(me.get_battery())
 
 global img
+
 me.streamon()
 
 def getKeyboardInput():
