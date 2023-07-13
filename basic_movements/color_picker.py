@@ -1,7 +1,5 @@
 from djitellopy import tello
-
 import cv2
-
 import numpy as np
 
 frameWidth = 480
@@ -67,5 +65,4 @@ while True:
     if cv2.waitKey(1) and 0xFF == ord('q'):
         break
 
-cap.release()
 cv2.destroyAllWindows()

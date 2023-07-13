@@ -12,6 +12,7 @@ me.streamon()
 
 cap = cv2.VideoCapture(1)
 
+# get from color_picker.py
 hsvVals = [0,0,188,179,33,245]
 sensors = 3
 threshold = 0.2
