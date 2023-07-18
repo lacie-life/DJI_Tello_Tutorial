@@ -8,10 +8,10 @@ me.connect()
 print(me.get_battery())
 
 me.streamon()
-me.takeoff()
+# me.takeoff()
 
-me.send_rc_control(0, 0, 25, 0)
-time.sleep(2.2)
+# me.send_rc_control(0, 0, 25, 0)
+# time.sleep(2.2)
 w, h = 360, 240
 fbRange = [6200, 6800]
 pid = [0.4, 0.4, 0]
@@ -72,10 +72,12 @@ while True:
     img = cv2.resize(img, (w, h))
     img, info = findFace(img)
     pError = trackFace( info, w, pid, pError)
-    #print("Center", info[0], "Area", info[1])
+    # print("Center", info[0], "Area", info[1])
     cv2.imshow("Output", img)
 
-    if cv2.waitkey(1) & 0xFF == ord('q'):
-        me.land()
-        break
+    cv2.waitKey(1)
+
+    # if cv2.waitkey(1) & 0xFF == ord('q'):
+    #     me.land()
+    #     break
 
